@@ -32,14 +32,14 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-20</relative_minimum>
+                                        <relative_minimum>-10</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
+                                    <topic>/odom/debug_times</topic>
                                     <type>drive_ros_msgs/TimeCompare</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>time_1</field>
+                                    <field>header/stamp</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
@@ -48,7 +48,7 @@
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
+                                    <topic>/odom/debug_times</topic>
                                     <type>drive_ros_msgs/TimeCompare</type>
                                 </y_axis>
                             </axes>
@@ -69,17 +69,221 @@
                                 <steps_invert>false</steps_invert>
                                 <sticks_baseline>0</sticks_baseline>
                                 <sticks_orientation>2</sticks_orientation>
-                                <type>0</type>
+                                <type>2</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Mavlink</title>
+                            <title>Header ref</title>
                         </curve_0>
+                        <curve_1>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-10</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/odom/debug_times</topic>
+                                    <type>drive_ros_msgs/TimeCompare</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>time_1</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/odom/debug_times</topic>
+                                    <type>drive_ros_msgs/TimeCompare</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>2</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>IMU</title>
+                        </curve_1>
+                        <curve_2>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-10</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/odom/debug_times</topic>
+                                    <type>drive_ros_msgs/TimeCompare</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>time_2</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/odom/debug_times</topic>
+                                    <type>drive_ros_msgs/TimeCompare</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>2</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>Odo</title>
+                        </curve_2>
+                        <curve_3>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-10</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/odom/debug_times</topic>
+                                    <type>drive_ros_msgs/TimeCompare</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/from_mav/imu</topic>
+                                    <type>drive_ros_msgs/mav_cc16_IMU</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>2</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>IMU_ORIG</title>
+                        </curve_3>
+                        <curve_4>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-10</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/odom/debug_times</topic>
+                                    <type>drive_ros_msgs/TimeCompare</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/from_mav/odometer_delta</topic>
+                                    <type>drive_ros_msgs/mav_cc16_ODOMETER_DELTA</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>2</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>ODO_ORIG</title>
+                        </curve_4>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>Mavlink Time</title>
+                    <title>Absolut Times</title>
                 </column_0>
             </row_0>
             <row_1>
@@ -108,137 +312,10 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-20</relative_minimum>
+                                        <relative_minimum>-30</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
-                                </x_axis>
-                                <y_axis>
-                                    <field>time_2</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1000</absolute_maximum>
-                                        <absolute_minimum>0</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-1000</relative_minimum>
-                                        <type>0</type>
-                                    </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
-                                </y_axis>
-                            </axes>
-                            <color>
-                                <custom_color>#000000</custom_color>
-                                <type>0</type>
-                            </color>
-                            <data>
-                                <circular_buffer_capacity>1000</circular_buffer_capacity>
-                                <time_frame_length>10</time_frame_length>
-                                <type>0</type>
-                            </data>
-                            <style>
-                                <lines_interpolate>false</lines_interpolate>
-                                <pen_style>1</pen_style>
-                                <pen_width>1</pen_width>
-                                <render_antialias>false</render_antialias>
-                                <steps_invert>false</steps_invert>
-                                <sticks_baseline>0</sticks_baseline>
-                                <sticks_orientation>2</sticks_orientation>
-                                <type>0</type>
-                            </style>
-                            <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Ros Time</title>
-                        </curve_0>
-                        <curve_1>
-                            <axes>
-                                <x_axis>
-                                    <field>header/stamp</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1000</absolute_maximum>
-                                        <absolute_minimum>0</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-20</relative_minimum>
-                                        <type>2</type>
-                                    </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
-                                </x_axis>
-                                <y_axis>
-                                    <field>header/stamp</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1000</absolute_maximum>
-                                        <absolute_minimum>0</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-1000</relative_minimum>
-                                        <type>0</type>
-                                    </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
-                                </y_axis>
-                            </axes>
-                            <color>
-                                <custom_color>#000000</custom_color>
-                                <type>0</type>
-                            </color>
-                            <data>
-                                <circular_buffer_capacity>1000</circular_buffer_capacity>
-                                <time_frame_length>10</time_frame_length>
-                                <type>0</type>
-                            </data>
-                            <style>
-                                <lines_interpolate>false</lines_interpolate>
-                                <pen_style>1</pen_style>
-                                <pen_width>1</pen_width>
-                                <render_antialias>false</render_antialias>
-                                <steps_invert>false</steps_invert>
-                                <sticks_baseline>0</sticks_baseline>
-                                <sticks_orientation>2</sticks_orientation>
-                                <type>0</type>
-                            </style>
-                            <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Ref</title>
-                        </curve_1>
-                    </curves>
-                    <legend>
-                        <visible>true</visible>
-                    </legend>
-                    <plot_rate>30</plot_rate>
-                    <title>Ros Time</title>
-                </column_0>
-            </row_1>
-            <row_2>
-                <column_0>
-                    <axes>
-                        <axes>
-                            <x_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
-                                <title_visible>true</title_visible>
-                            </x_axis>
-                            <y_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
-                                <title_visible>true</title_visible>
-                            </y_axis>
-                        </axes>
-                    </axes>
-                    <curves>
-                        <curve_0>
-                            <axes>
-                                <x_axis>
-                                    <field>header/stamp</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1000</absolute_maximum>
-                                        <absolute_minimum>0</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-20</relative_minimum>
-                                        <type>2</type>
-                                    </scale>
-                                    <topic>/from_mav/debug_times</topic>
+                                    <topic>/odom/debug_times</topic>
                                     <type>drive_ros_msgs/TimeCompare</type>
                                 </x_axis>
                                 <y_axis>
@@ -251,7 +328,7 @@
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
+                                    <topic>/odom/debug_times</topic>
                                     <type>drive_ros_msgs/TimeCompare</type>
                                 </y_axis>
                             </axes>
@@ -284,7 +361,7 @@
                     <plot_rate>30</plot_rate>
                     <title>Diff Time</title>
                 </column_0>
-            </row_2>
+            </row_1>
         </plots>
         <track_points>false</track_points>
     </table>

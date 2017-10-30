@@ -18,7 +18,7 @@
                             <y_axis>
                                 <custom_title>Untitled Axis</custom_title>
                                 <title_type>0</title_type>
-                                <title_visible>true</title_visible>
+                                <title_visible>false</title_visible>
                             </y_axis>
                         </axes>
                     </axes>
@@ -35,11 +35,11 @@
                                         <relative_minimum>-20</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>time_1</field>
+                                    <field>pose/position/x</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
@@ -48,8 +48,8 @@
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -72,14 +72,116 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Mavlink</title>
+                            <title>x</title>
                         </curve_0>
+                        <curve_1>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-20</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>pose/position/y</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>y</title>
+                        </curve_1>
+                        <curve_2>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-20</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>pose/position/z</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>z</title>
+                        </curve_2>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>Mavlink Time</title>
+                    <title>Position</title>
                 </column_0>
             </row_0>
             <row_1>
@@ -94,7 +196,7 @@
                             <y_axis>
                                 <custom_title>Untitled Axis</custom_title>
                                 <title_type>0</title_type>
-                                <title_visible>true</title_visible>
+                                <title_visible>false</title_visible>
                             </y_axis>
                         </axes>
                     </axes>
@@ -111,11 +213,11 @@
                                         <relative_minimum>-20</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>time_2</field>
+                                    <field>pose/orientation/x</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
@@ -124,8 +226,8 @@
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -148,7 +250,7 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Ros Time</title>
+                            <title>x</title>
                         </curve_0>
                         <curve_1>
                             <axes>
@@ -162,11 +264,11 @@
                                         <relative_minimum>-20</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>header/stamp</field>
+                                    <field>pose/orientation/y</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
@@ -175,8 +277,8 @@
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -199,34 +301,9 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Ref</title>
+                            <title>y</title>
                         </curve_1>
-                    </curves>
-                    <legend>
-                        <visible>true</visible>
-                    </legend>
-                    <plot_rate>30</plot_rate>
-                    <title>Ros Time</title>
-                </column_0>
-            </row_1>
-            <row_2>
-                <column_0>
-                    <axes>
-                        <axes>
-                            <x_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
-                                <title_visible>true</title_visible>
-                            </x_axis>
-                            <y_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
-                                <title_visible>true</title_visible>
-                            </y_axis>
-                        </axes>
-                    </axes>
-                    <curves>
-                        <curve_0>
+                        <curve_2>
                             <axes>
                                 <x_axis>
                                     <field>header/stamp</field>
@@ -238,11 +315,11 @@
                                         <relative_minimum>-20</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>diff_time</field>
+                                    <field>pose/orientation/z</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
@@ -251,8 +328,8 @@
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/debug_times</topic>
-                                    <type>drive_ros_msgs/TimeCompare</type>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -275,16 +352,67 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Diff</title>
-                        </curve_0>
+                            <title>z</title>
+                        </curve_2>
+                        <curve_3>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-20</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>pose/orientation/w</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu_ros_odometry/visualization_marker</topic>
+                                    <type>visualization_msgs/Marker</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>w</title>
+                        </curve_3>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>Diff Time</title>
+                    <title>Orientation</title>
                 </column_0>
-            </row_2>
+            </row_1>
         </plots>
         <track_points>false</track_points>
     </table>
