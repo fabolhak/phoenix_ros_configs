@@ -3,7 +3,7 @@
     <table>
         <background_color>#ffffff</background_color>
         <foreground_color>#000000</foreground_color>
-        <link_cursor>true</link_cursor>
+        <link_cursor>false</link_cursor>
         <link_scale>false</link_scale>
         <plots>
             <row_0>
@@ -11,8 +11,8 @@
                     <axes>
                         <axes>
                             <x_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
+                                <custom_title>Time</custom_title>
+                                <title_type>1</title_type>
                                 <title_visible>true</title_visible>
                             </x_axis>
                             <y_axis>
@@ -30,25 +30,25 @@
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
-                                        <absolute_minimum>-1.5</absolute_minimum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
                                     <field>linear_acceleration/x</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>1.5</absolute_maximum>
-                                        <absolute_minimum>-1.5</absolute_minimum>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
@@ -72,7 +72,7 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>x</title>
+                            <title>raw</title>
                         </curve_0>
                         <curve_1>
                             <axes>
@@ -83,74 +83,23 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu/data</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>linear_acceleration/y</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1.5</absolute_maximum>
-                                        <absolute_minimum>-1.5</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
-                                    </scale>
-                                    <topic>/from_mav/imu</topic>
-                                    <type>sensor_msgs/Imu</type>
-                                </y_axis>
-                            </axes>
-                            <color>
-                                <custom_color>#000000</custom_color>
-                                <type>0</type>
-                            </color>
-                            <data>
-                                <circular_buffer_capacity>1000</circular_buffer_capacity>
-                                <time_frame_length>10</time_frame_length>
-                                <type>0</type>
-                            </data>
-                            <style>
-                                <lines_interpolate>false</lines_interpolate>
-                                <pen_style>1</pen_style>
-                                <pen_width>1</pen_width>
-                                <render_antialias>false</render_antialias>
-                                <steps_invert>false</steps_invert>
-                                <sticks_baseline>0</sticks_baseline>
-                                <sticks_orientation>2</sticks_orientation>
-                                <type>0</type>
-                            </style>
-                            <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>y</title>
-                        </curve_1>
-                        <curve_2>
-                            <axes>
-                                <x_axis>
-                                    <field>header/stamp</field>
+                                    <field>linear_acceleration/x</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
-                                        <type>2</type>
-                                    </scale>
-                                    <topic>/from_mav/imu</topic>
-                                    <type>sensor_msgs/Imu</type>
-                                </x_axis>
-                                <y_axis>
-                                    <field>linear_acceleration/z</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1.5</absolute_maximum>
-                                        <absolute_minimum>-1.5</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu/data</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
@@ -174,27 +123,27 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>z</title>
-                        </curve_2>
+                            <title>calibrated</title>
+                        </curve_1>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>IMU Acc Values</title>
+                    <title>X ACC</title>
                 </column_0>
                 <column_1>
                     <axes>
                         <axes>
                             <x_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
+                                <custom_title>Time</custom_title>
+                                <title_type>1</title_type>
                                 <title_visible>true</title_visible>
                             </x_axis>
                             <y_axis>
                                 <custom_title>Untitled Axis</custom_title>
                                 <title_type>0</title_type>
-                                <title_visible>true</title_visible>
+                                <title_visible>false</title_visible>
                             </y_axis>
                         </axes>
                     </axes>
@@ -208,24 +157,24 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>rc_velocity</field>
+                                    <field>linear_acceleration/y</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>2</absolute_maximum>
-                                        <absolute_minimum>-2</absolute_minimum>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -248,7 +197,7 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>desired</title>
+                            <title>raw</title>
                         </curve_0>
                         <curve_1>
                             <axes>
@@ -259,24 +208,24 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>encoder/0/vel</field>
+                                    <field>linear_acceleration/y</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>2</absolute_maximum>
-                                        <absolute_minimum>-2</absolute_minimum>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/odometer_delta</topic>
-                                    <type>drive_ros_msgs/VehicleEncoder</type>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -299,14 +248,14 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>actual</title>
+                            <title>calibrated</title>
                         </curve_1>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>Velocity</title>
+                    <title>Y ACC</title>
                 </column_1>
             </row_0>
             <row_1>
@@ -314,8 +263,8 @@
                     <axes>
                         <axes>
                             <x_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
+                                <custom_title>Time</custom_title>
+                                <title_type>1</title_type>
                                 <title_visible>true</title_visible>
                             </x_axis>
                             <y_axis>
@@ -335,23 +284,148 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>linear_acceleration/z</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>raw</title>
+                        </curve_0>
+                        <curve_1>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-50</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>linear_acceleration/z</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>calibrated</title>
+                        </curve_1>
+                    </curves>
+                    <legend>
+                        <visible>true</visible>
+                    </legend>
+                    <plot_rate>30</plot_rate>
+                    <title>Y ACC</title>
+                </column_0>
+                <column_1>
+                    <axes>
+                        <axes>
+                            <x_axis>
+                                <custom_title>Time</custom_title>
+                                <title_type>1</title_type>
+                                <title_visible>true</title_visible>
+                            </x_axis>
+                            <y_axis>
+                                <custom_title>Untitled Axis</custom_title>
+                                <title_type>0</title_type>
+                                <title_visible>false</title_visible>
+                            </y_axis>
+                        </axes>
+                    </axes>
+                    <curves>
+                        <curve_0>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-50</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
                                     <field>angular_velocity/x</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>1</absolute_maximum>
-                                        <absolute_minimum>-1</absolute_minimum>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
@@ -375,7 +449,7 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>x</title>
+                            <title>raw</title>
                         </curve_0>
                         <curve_1>
                             <axes>
@@ -386,74 +460,23 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu/data</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>angular_velocity/y</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1</absolute_maximum>
-                                        <absolute_minimum>-1</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
-                                    </scale>
-                                    <topic>/from_mav/imu</topic>
-                                    <type>sensor_msgs/Imu</type>
-                                </y_axis>
-                            </axes>
-                            <color>
-                                <custom_color>#000000</custom_color>
-                                <type>0</type>
-                            </color>
-                            <data>
-                                <circular_buffer_capacity>1000</circular_buffer_capacity>
-                                <time_frame_length>10</time_frame_length>
-                                <type>0</type>
-                            </data>
-                            <style>
-                                <lines_interpolate>false</lines_interpolate>
-                                <pen_style>1</pen_style>
-                                <pen_width>1</pen_width>
-                                <render_antialias>false</render_antialias>
-                                <steps_invert>false</steps_invert>
-                                <sticks_baseline>0</sticks_baseline>
-                                <sticks_orientation>2</sticks_orientation>
-                                <type>0</type>
-                            </style>
-                            <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>y</title>
-                        </curve_1>
-                        <curve_2>
-                            <axes>
-                                <x_axis>
-                                    <field>header/stamp</field>
+                                    <field>angular_velocity/x</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
-                                        <type>2</type>
-                                    </scale>
-                                    <topic>/from_mav/imu</topic>
-                                    <type>sensor_msgs/Imu</type>
-                                </x_axis>
-                                <y_axis>
-                                    <field>angular_velocity/z</field>
-                                    <field_type>0</field_type>
-                                    <scale>
-                                        <absolute_maximum>1</absolute_maximum>
-                                        <absolute_minimum>-1</absolute_minimum>
-                                        <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/imu</topic>
+                                    <topic>/imu/data</topic>
                                     <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
@@ -477,21 +500,23 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>z</title>
-                        </curve_2>
+                            <title>calibrated</title>
+                        </curve_1>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>IMU Gyro Values</title>
-                </column_0>
-                <column_1>
+                    <title>X GYRO</title>
+                </column_1>
+            </row_1>
+            <row_2>
+                <column_0>
                     <axes>
                         <axes>
                             <x_axis>
-                                <custom_title>Untitled Axis</custom_title>
-                                <title_type>0</title_type>
+                                <custom_title>Time</custom_title>
+                                <title_type>1</title_type>
                                 <title_visible>true</title_visible>
                             </x_axis>
                             <y_axis>
@@ -511,24 +536,24 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>rc_steering_front</field>
+                                    <field>angular_velocity/y</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>1</absolute_maximum>
-                                        <absolute_minimum>-1</absolute_minimum>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -551,7 +576,7 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>desired_front</title>
+                            <title>raw</title>
                         </curve_0>
                         <curve_1>
                             <axes>
@@ -562,24 +587,24 @@
                                         <absolute_maximum>1000</absolute_maximum>
                                         <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
-                                        <relative_minimum>-30</relative_minimum>
+                                        <relative_minimum>-50</relative_minimum>
                                         <type>2</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>rc_steering_rear</field>
+                                    <field>angular_velocity/y</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>1</absolute_maximum>
-                                        <absolute_minimum>-1</absolute_minimum>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
-                                        <type>1</type>
+                                        <type>0</type>
                                     </scale>
-                                    <topic>/from_mav/heartbeat</topic>
-                                    <type>drive_ros_msgs/mav_cc16_HEARTBEAT</type>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
                                 </y_axis>
                             </axes>
                             <color>
@@ -602,16 +627,141 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>desired_rear</title>
+                            <title>calibrated</title>
                         </curve_1>
                     </curves>
                     <legend>
                         <visible>true</visible>
                     </legend>
                     <plot_rate>30</plot_rate>
-                    <title>Steering</title>
+                    <title>Y GYRO</title>
+                </column_0>
+                <column_1>
+                    <axes>
+                        <axes>
+                            <x_axis>
+                                <custom_title>Time</custom_title>
+                                <title_type>1</title_type>
+                                <title_visible>true</title_visible>
+                            </x_axis>
+                            <y_axis>
+                                <custom_title>Untitled Axis</custom_title>
+                                <title_type>0</title_type>
+                                <title_visible>false</title_visible>
+                            </y_axis>
+                        </axes>
+                    </axes>
+                    <curves>
+                        <curve_0>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-50</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>angular_velocity/z</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>raw</title>
+                        </curve_0>
+                        <curve_1>
+                            <axes>
+                                <x_axis>
+                                    <field>header/stamp</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-50</relative_minimum>
+                                        <type>2</type>
+                                    </scale>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </x_axis>
+                                <y_axis>
+                                    <field>angular_velocity/z</field>
+                                    <field_type>0</field_type>
+                                    <scale>
+                                        <absolute_maximum>1000</absolute_maximum>
+                                        <absolute_minimum>0</absolute_minimum>
+                                        <relative_maximum>0</relative_maximum>
+                                        <relative_minimum>-1000</relative_minimum>
+                                        <type>0</type>
+                                    </scale>
+                                    <topic>/imu/data</topic>
+                                    <type>sensor_msgs/Imu</type>
+                                </y_axis>
+                            </axes>
+                            <color>
+                                <custom_color>#000000</custom_color>
+                                <type>0</type>
+                            </color>
+                            <data>
+                                <circular_buffer_capacity>1000</circular_buffer_capacity>
+                                <time_frame_length>10</time_frame_length>
+                                <type>0</type>
+                            </data>
+                            <style>
+                                <lines_interpolate>false</lines_interpolate>
+                                <pen_style>1</pen_style>
+                                <pen_width>1</pen_width>
+                                <render_antialias>false</render_antialias>
+                                <steps_invert>false</steps_invert>
+                                <sticks_baseline>0</sticks_baseline>
+                                <sticks_orientation>2</sticks_orientation>
+                                <type>0</type>
+                            </style>
+                            <subscriber_queue_size>100</subscriber_queue_size>
+                            <title>calibrated</title>
+                        </curve_1>
+                    </curves>
+                    <legend>
+                        <visible>true</visible>
+                    </legend>
+                    <plot_rate>30</plot_rate>
+                    <title>Z GYRO</title>
                 </column_1>
-            </row_1>
+            </row_2>
         </plots>
         <track_points>false</track_points>
     </table>
